@@ -1,17 +1,19 @@
 const express = require('express');
 const app = express();
-const port = 3000;
+const PORT = 3000;
+
+const sequelize = require('./config/db');
 
 app.use(express.json());
 
-app.get('/', (req, res) => {
-  res.send('Welcome to Me-API Playground');
+app.get('/health', async (req, res) => {
+  try {
+    await sequelize.authenticate();
+    res.status(200).json({ status: 'OK', message: 'Server and DB are running!' });
+  } catch (error) {
+    console.error('DB connection error:', error);
+    res.status(500).json({ status: 'Error', message: 'Database not reachable' });
+  }
 });
 
-app.get('/health', (req, res) => {
-  res.status(200).json({status: 'OK', message: 'Server is running!'});
-});
-
-app.listen(port, () => {
-  console.log(`Server running on http://localhost:${port}`);
-});
+app.listen(PORT, () => console.log(`Server running on http://localhost:${PORT}`));

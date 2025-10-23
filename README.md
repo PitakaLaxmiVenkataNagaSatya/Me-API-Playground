@@ -1,10 +1,14 @@
 # Me-API Playground
 
+[![Deploy to Render](https://img.shields.io/badge/Deploy%20to-Render-46E3B7?logo=render&logoColor=white)](https://render.com/deploy)
+[![Deploy to Heroku](https://img.shields.io/badge/Deploy%20to-Heroku-430098?logo=heroku&logoColor=white)](https://heroku.com/deploy)
+
 A tiny full-stack app that stores your candidate profile in a database and exposes it via a small API with a minimal frontend to run queries.
 
 - Backend: Node.js + Express 5
 - Database: SQLite via Sequelize (easily switchable to MySQL/Postgres)
 - Frontend: Plain HTML/JS served by Express
+- **Deployment-Ready**: Includes configurations for Render, Heroku, Docker, and more
 
 ## URLs (local)
 - Backend health: http://localhost:3000/health
@@ -106,13 +110,17 @@ Create a `.env` file in the project root to override defaults.
 
 ## Deployment
 
-📚 **[Complete Deployment Guide](docs/DEPLOYMENT.md)** - Detailed instructions for deploying to various platforms.
+📚 **[Complete Deployment Guide](docs/DEPLOYMENT.md)** | 📋 **[Deployment Checklist](docs/DEPLOYMENT_CHECKLIST.md)**
 
-Quick deployment options:
-- **Render** (Recommended) - One-click deploy using `render.yaml`
-- **Heroku** - Deploy using `Procfile`
-- **Docker** - Use included `Dockerfile` and `docker-compose.yml`
-- **Railway**, **Fly.io** - See deployment guide for steps
+### Quick Deploy Options
+
+| Platform | Method | Docs |
+|----------|--------|------|
+| **Render** ⭐ | One-click deploy via `render.yaml` | [Guide](docs/DEPLOYMENT.md#render-recommended) |
+| **Heroku** | Deploy via `Procfile` | [Guide](docs/DEPLOYMENT.md#heroku) |
+| **Docker** | Use `Dockerfile` & `docker-compose.yml` | [Guide](docs/DEPLOYMENT.md#docker) |
+| **Railway** | CLI deploy | [Guide](docs/DEPLOYMENT.md#railway) |
+| **Fly.io** | CLI deploy | [Guide](docs/DEPLOYMENT.md#flyio) |
 
 ### Quick Start - Render
 

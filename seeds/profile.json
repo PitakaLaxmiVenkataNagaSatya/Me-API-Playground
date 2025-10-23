@@ -1,0 +1,38 @@
+{
+  "name": "Pitaka Laxmi Venkata Naga Satya",
+  "email": "pitaka.satya.22031@iitgoa.ac.in",
+  "education": "B.Tech in Computer Science and Engineering, IIT Goa (2022–2026)",
+  "skills": [
+    "Python",
+    "C",
+    "C++",
+    "HTML",
+    "CSS",
+    "Bootstrap",
+    "JavaScript",
+    "Node.js",
+    "Express.js",
+    "Data Structures and Algorithms",
+    "MySQL"
+  ],
+  "work": [
+    {
+      "company": "Hi-Techsters IT Services",
+      "role": "Frontend Developer Intern",
+      "period": "June 2025 – Aug 2025",
+      "summary": "Contributed to Varnika Designs by building responsive pages with HTML, CSS, JavaScript, Bootstrap; ensured cross-device compatibility and pixel-perfect UI; designed a custom display interface for large-screen restaurant outlet; collaborated in a team and adapted to evolving requirements."
+    }
+  ],
+  "projects": [
+    {
+      "title": "CPU Scheduling Simulator",
+      "description": "Web-based CPU Scheduling Simulator with visualization of FCFS, SJF (P/NP), LJF (P/NP), Priority (P/NP), Round Robin, and a Proposed Hybrid algorithm; includes Gantt chart, dynamic process management, and metrics (utilization, throughput, averages). Built with JavaScript, HTML, CSS, Bootstrap; uses OOP patterns and async updates for preemptive scheduling.",
+      "links": { "github": "https://github.com/PitakaLaxmiVenkataNagaSatya" },
+      "skills": ["JavaScript", "HTML", "CSS", "Bootstrap"]
+    }
+  ],
+  "links": {
+    "github": "https://github.com/PitakaLaxmiVenkataNagaSatya",
+    "linkedin": "https://www.linkedin.com/in/pitaka-laxmi-venkata-naga-satya/"
+  }
+}

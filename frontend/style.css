@@ -1,0 +1,14 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+
+section {
+  margin-bottom: 30px;
+}
+
+pre {
+  background: #f0f0f0;
+  padding: 10px;
+  overflow-x: auto;
+}

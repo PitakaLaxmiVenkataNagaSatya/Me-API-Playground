@@ -104,7 +104,17 @@ Environment variables (optional):
 
 Create a `.env` file in the project root to override defaults.
 
-## Hosting (Guidance)
+## Deployment
+
+📚 **[Complete Deployment Guide](docs/DEPLOYMENT.md)** - Detailed instructions for deploying to various platforms.
+
+Quick deployment options:
+- **Render** (Recommended) - One-click deploy using `render.yaml`
+- **Heroku** - Deploy using `Procfile`
+- **Docker** - Use included `Dockerfile` and `docker-compose.yml`
+- **Railway**, **Fly.io** - See deployment guide for steps
+
+### Quick Start - Render
 
 - Backend: Deploy to Render, Railway, or Fly.io. Use persistent volume for SQLite or migrate to a managed DB (Postgres/MySQL) and set env vars.
 - Frontend: Served by the backend; no separate hosting needed. For static hosting (Netlify/Vercel), set `window.API_BASE` in the HTML to point at your backend URL.

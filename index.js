@@ -3,6 +3,7 @@ const app = express();
 const PORT = 3000;
 
 const sequelize = require('./config/db');
+const Profile = require('./models/Profile');
 
 app.use(express.json());
 
@@ -15,5 +16,9 @@ app.get('/health', async (req, res) => {
     res.status(500).json({ status: 'Error', message: 'Database not reachable' });
   }
 });
+
+sequelize.sync()
+  .then(() => console.log('Database & tables synced'))
+  .catch(err => console.error('Sync error:', err));
 
 app.listen(PORT, () => console.log(`Server running on http://localhost:${PORT}`));

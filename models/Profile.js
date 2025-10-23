@@ -33,8 +33,12 @@ const Profile = sequelize.define('Profile', {
     type: DataTypes.STRING,
     allowNull: true
   },
-  portfolio: {
-    type: DataTypes.STRING,
+  skills: {
+    type: DataTypes.JSON,  
+    allowNull: true
+  },
+  projects: {
+    type: DataTypes.JSON,
     allowNull: true
   }
 }, {

@@ -1,5 +1,8 @@
 FROM node:20-alpine
 
+# Install build dependencies for native modules
+RUN apk add --no-cache python3 make g++
+
 # Set working directory
 WORKDIR /app
 
@@ -7,7 +10,7 @@ WORKDIR /app
 COPY package*.json ./
 
 # Install dependencies
-RUN npm ci --only=production
+RUN npm install --production=false
 
 # Copy application files
 COPY . .
@@ -19,4 +22,4 @@ RUN mkdir -p data
 EXPOSE 3000
 
 # Seed database and start server
-CMD npm run seed && npm start
+CMD ["sh", "-c", "npm run seed && npm start"]

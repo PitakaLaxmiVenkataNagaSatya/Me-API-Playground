@@ -120,7 +120,9 @@ Example: in `frontend/index.html` head section add
 1) Push this repo to GitHub
 2) In Render dashboard, "New +" → "Blueprint" → connect your repo
 3) Render auto-detects `render.yaml`; click "Apply" to create the service
-4) On first boot, Render runs `npm install` and `npm run seed`; the SQLite file is persisted under `/data` mount
+4) On first boot, Render runs `npm install` and `npm run seed` and starts the app
+
+Note on Free tier: Disks are not supported, so SQLite lives on the ephemeral filesystem. Your profile is reseeded on each deploy/rebuild. If you need persistence across restarts without reseeding, upgrade to a plan with disks or switch to Postgres (set `DB_DIALECT=postgres` and `DATABASE_URL`).
 
 Environment variables (optional):
 - PORT is provided by Render

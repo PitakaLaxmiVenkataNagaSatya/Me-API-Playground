@@ -2,11 +2,12 @@ services:
   - type: web
     name: me-api-playground
     env: node
-    buildCommand: npm install && npm run seed
-    startCommand: npm start
     plan: free
     autoDeploy: true
-    disk:
-      name: data
-      mountPath: /opt/render/project/src/data
-      sizeGB: 1
+    buildCommand: npm install && npm run seed
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: DB_DIALECT
+        value: sqlite

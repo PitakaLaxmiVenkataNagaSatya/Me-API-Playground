@@ -2,30 +2,48 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Me-API Playground</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Me-API Playground</h1>
+  <main class="container">
+    <header class="hero">
+      <div class="hero-content">
+        <h1>Me‑API Playground</h1>
+        <p class="subtitle">Pitaka Laxmi Venkata Naga Satya</p>
+      </div>
+    </header>
 
-  <section>
-    <h2>My Profile</h2>
-    <button id="loadProfile">Load Profile</button>
-    <pre id="profileOutput"></pre>
-  </section>
+    <section class="card">
+      <h2>My Profile</h2>
+      <div class="controls">
+        <button class="btn" id="loadProfile">Load Profile</button>
+      </div>
+      <div class="output" id="profileOutput" aria-live="polite"></div>
+    </section>
 
-  <section>
-    <h2>Search Projects by Skill</h2>
-    <input type="text" id="skillInput" placeholder="Enter skill">
-    <button id="searchProjects">Search</button>
-    <pre id="projectsOutput"></pre>
-  </section>
+    <section class="card">
+      <h2>Search Projects by Skill</h2>
+      <div class="controls">
+        <input class="input" type="text" id="skillInput" placeholder="e.g. JavaScript">
+        <button class="btn" id="searchProjects">Search</button>
+      </div>
+      <div class="output" id="projectsOutput" aria-live="polite"></div>
+    </section>
 
-  <section>
-    <h2>Top Skills</h2>
-    <button id="loadSkills">Load Skills</button>
-    <pre id="skillsOutput"></pre>
-  </section>
+    <section class="card">
+      <h2>Top Skills</h2>
+      <div class="controls">
+        <button class="btn" id="loadSkills">Load Skills</button>
+      </div>
+      <div class="output" id="skillsOutput" aria-live="polite"></div>
+    </section>
+
+    <footer class="footer">
+      <small>Backend health: <a href="/health" target="_blank">/health</a></small>
+    </footer>
+  </main>
 
   <script src="script.js"></script>
 </body>
